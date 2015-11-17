@@ -5,6 +5,7 @@ var guess;
 var hits = 0;
 var guesses = 0;
 var isSunk = false;
+var stats = "You took" + guesses + " guesses to sink the battleship, " + "which means your shooting accuracy was " + (3/guesses);
 
 while (isSunk == flase){
 	guess = prompt("Ready, aim fire! (enter a number 0-6):");
@@ -17,6 +18,7 @@ while (isSunk == flase){
 			if (hits == 3){
 				isSunk = true;
 				alert("You sank my battleship!");
+				alert(stats);
 			}
 		}
 	}
